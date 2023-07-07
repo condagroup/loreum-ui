@@ -1,0 +1,12 @@
+# .graphclientrc.yml
+sources:
+  - name: loreum-nft
+    handler:
+      graphql:
+        # endpoint: https://api.studio.thegraph.com/query/42329/blackholes/v0.0.1
+
+        endpoint: https://api.thegraph.com/subgraphs/name/xhad/explorers
+        # endpoint: http://localhost:8000/subgraphs/name/loreum-nft
+
+documents:
+  - ./src/subgraph/subgraph.graphql

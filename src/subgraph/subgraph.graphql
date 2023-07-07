@@ -1,0 +1,57 @@
+query getApprovalTxes($filter: ApprovalTx_filter) {
+  approvalTxes(first: 50, where: $filter) {
+    id
+    owner
+    approved
+    tokenId
+    timestamp
+  }
+}
+
+query getApprovalForAllTxes($filter: ApprovalForAllTx_filter) {
+  approvalForAllTxes(first: 50, where: $filter) {
+    id
+    owner
+    operator
+    approved
+    timestamp
+  }
+}
+
+query getMintCostUpdatedTxes($filter: MintCostUpdatedTx_filter) {
+  mintCostUpdatedTxes(first: 50, where: $filter) {
+    id
+    oldMintCost
+    newMintCost
+    timestamp
+  }
+}
+
+query getOwnershipTransferredTxes($filter: OwnershipTransferredTx_filter) {
+  ownershipTransferredTxes(first: 50, where: $filter) {
+    id
+    previousOwner
+    newOwner
+    timestamp
+  }
+}
+
+query getTransferTxes($filter: TransferTx_filter) {
+  transferTxes(first: 100, where: $filter) {
+    id
+    from
+    to
+    tokenId
+    timestamp
+  }
+}
+
+query getNftMintedTxes($filter: NFTMintedTx_filter, $first: Int, $orderBy: NFTMintedTx_orderBy, $orderDirection: OrderDirection) {
+  nftmintedTxes(first: $first, where: $filter, orderBy: $orderBy, orderDirection: $orderDirection) {
+    id
+    mintedBy
+    tokenId
+    cost
+    timestamp
+  }
+}

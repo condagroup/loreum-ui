@@ -1,0 +1,56 @@
+{
+  "name": "minting-app",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "graph": "DEBUG=1 graphclient build",
+    "format:check": "prettier --check '**/*.{ts,tsx,json,yaml,md}'",
+    "format:write": "prettier --write '**/*.{ts,tsx,json,yaml,md}'",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --max-warnings=1",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@loreum/loreum-nft": "^0.1.6",
+    "@rainbow-me/rainbowkit": "^0.8.1",
+    "@stitches/react": "^1.2.8",
+    "@vercel/analytics": "^0.1.10",
+    "ethers": "5.7.2",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-minimal-pie-chart": "^8.4.0",
+    "react-router-dom": "^6.8.1",
+    "wagmi": "^0.11.5",
+    "zod": "^3.20.5",
+    "zustand": "^4.3.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@graphprotocol/client-cli": "^2.2.16",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}

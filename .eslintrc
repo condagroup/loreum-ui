@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": false,
+    "es2021": true,
+    "mocha": true,
+    "node": true
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "standard",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:node/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "rules": {
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "ignores": [
+          "modules"
+        ]
+      }
+    ],
+    "node/no-unpublished-import": ["off"],
+    "newline-after-function": ["off"],
+    "camelcase": ["off"],
+    "no-process-exit": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "no-new": ["off"]
+  },
+  "settings": {
+    "node": {
+      "tryExtensions": [
+        ".js",
+        ".json",
+        ".ts",
+        ".tsx",
+        ".d.ts"
+      ]
+    }
+  }
+}
